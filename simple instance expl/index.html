@@ -11,8 +11,18 @@
 <body>
   <h1> Hello Developper</h1>
  <div id="app">
-    {{message}}
+      {{message}}
   <p>{{instructor}}</p>
+  <!--simple exemple of data binding -->
+     <img :src="image" alt="">
+     <!-- or use  this syntax :
+    <img v-bind:src="image" alt=""> 
+   -->
+
+   <!-- v-html st pour montrer que votre code contient des tag html -->
+      <span v-html="platforme" ></span>
+    <input type="text" :value="instructor">
+  
       {{ saySalam() }}
  </div>
 
