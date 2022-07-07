@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0/dist/vue.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+ 
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    
+                    <div id="app7">
+                      <h1> {{ counter }}</h1>
+                      <h3>RESULT : {{calcul}}</h3>
+                      <input class='form-control'      type="text" v-model:value="initiat">
+                       <button  v-on:click="toggle=!toggle" class="btn btn-secondary">Toggle</button>
+                      
+           <!-- v-if eliminate the dom physiqally which mean you wont find it in 'inspecter' -->
+           <!-- v-show change the style to display none and dont eliminate the dom from inspecter -->
+                       <div v-if="toggle">
+                        
+                        <button class='btn btn-primary'  v-on:click="increment(1)">increment</button>
+                        <button class='btn btn-primary'  v-on:click="decrement(1)">decrement</button>
+                        
+                        <hr>
+                        <button class='btn btn-primary'   v-on:click="increment(5)">increment</button>
+                        <button  class='btn btn-primary'   v-on:click="decrement(5)">decrement</button>
+                        <h3>FINAL RESULT : {{calcul}}</h3>
+                        <h3>
+                             <!-- when u use v-bind automaticlly u have an object inside -->
+                        <span class="badge" 
+                              v-bind:style="{color : result ? 'red' : 'blue', 'font-size':'25px'}"
+                              v-bind:class="classObject" >
+                              {{message}}
+                        </span>
+                         </h3>
+                       </div>
+                       <div v-else> click on Toggle to show the component</div>
+                  <ul>
+                    <li v-for=:courses>
+
+                    </li>
+                  </ul>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+ <script src="vue7.js"></script>
+</body>
+</html>

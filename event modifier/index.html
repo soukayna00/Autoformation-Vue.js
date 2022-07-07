@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0/dist/vue.js"></script>
+ 
+</head>
+<body>
+<div id="app3">
+<form action="">
+  <!-- v model is bidirectionnel you can change from data or from the html -->
+  <!-- v-bind is one way directed you can only change from data -->
+  <input  v-model="name" v-on:keyup.enter="login" type="text">
+ <input v-model.value="name">
+ <input v-model.value="name">
+  <!-- <span>{{name}}</span> -->
+  <!-- prevent is a event modifier that doesnt allow to the page to refresh -->
+  <button v-on:click.prevent="add"> submit</button>
+</form>
+
+
+
+
+
+
+</div>
+ <script src="vue3.js"></script>
+</body>
+</html>
